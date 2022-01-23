@@ -3,7 +3,7 @@ var request = require('request'); // for fetching the feed
 var fs = require('fs'); 
  
  module.exports = (cb)=>{
-    var req = request('http://rss.cnn.com/rss/cnn_topstories.xml')
+    var req = request('http://rss.cnn.com/rss/cnn_latest.rss')
     var feedparser = new FeedParser({});
     
     req.on('error', function (error) {
@@ -35,7 +35,7 @@ var fs = require('fs');
       var item;
 
       while (item = stream.read()) {
-        news += "          " + item.title;
+        news += "\n •  " + item.title;
       }
     });
 
