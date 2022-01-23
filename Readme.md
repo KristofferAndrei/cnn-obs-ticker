@@ -9,4 +9,4 @@ npm install
 node index.js
 ```
 
-Now every 5 seconds node will poll the rss feed for cnn and gather up the results
+~~Now every 5 seconds node will poll the rss feed for cnn and gather up the results~~
